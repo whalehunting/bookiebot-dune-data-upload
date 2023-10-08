@@ -1,0 +1,30 @@
+{
+	"name": "bookiebot-dune-data-upload",
+	"version": "1.0.0",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"format": "prettier \"**/*.+(js|jsx|json|yml|yaml|html|css|less|scss|ts|tsx|md|mdx|graphql|vue|py|java|php|sol)\" --write",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore ./",
+		"codegen": "graphql-codegen --config codegen.ts",
+		"start": "ts-node ./index.ts"
+	},
+	"devDependencies": {
+		"@graphql-codegen/cli": "^5.0.0",
+		"@graphql-codegen/typescript": "^4.0.1",
+		"@graphql-codegen/typescript-graphql-request": "^6.0.0",
+		"@graphql-codegen/typescript-operations": "^4.0.1",
+		"@json2csv/plainjs": "^7.0.3",
+		"@types/node": "^20.8.3",
+		"@typescript-eslint/eslint-plugin": "^6.7.4",
+		"@typescript-eslint/parser": "^6.7.4",
+		"eslint": "^8.51.0",
+		"graphql": "^16.8.1",
+		"graphql-request": "^6.1.0",
+		"prettier": "^3.0.3",
+		"ts-node": "^10.9.1",
+		"typechain": "^8.3.1",
+		"typescript": "^5.2.2"
+	},
+	"packageManager": "yarn@3.6.4"
+}

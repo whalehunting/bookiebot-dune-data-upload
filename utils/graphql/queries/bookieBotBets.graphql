@@ -1,0 +1,41 @@
+query bookieBotBets($skip: Int) {
+	bets(
+		where: { affiliate: "0xacaad22871bcaf73d355db291bf848f2c23dedd8" }
+		first: 1000
+		skip: $skip
+	) {
+		betId
+		type
+		bettor
+		affiliate
+		createdBlockTimestamp
+		createdBlockNumber
+		createdTxHash
+		core {
+			id
+		}
+		_conditionIds
+		selections {
+			id
+			_outcomeId
+		}
+		_games {
+			gameId
+			title
+			sport {
+				id
+				name
+			}
+			league {
+				id
+				name
+				country {
+					name
+				}
+			}
+			conditions {
+				conditionId
+			}
+		}
+	}
+}
